@@ -1,0 +1,7 @@
+.Content {
+	background-color: rgb(49, 49, 49);
+	min-height: 500px;
+	max-width: 1200px;
+	width: 85%;
+	margin: 0 auto;
+}
