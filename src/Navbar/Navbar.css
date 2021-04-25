@@ -1,0 +1,23 @@
+.Navbar {
+	background-color: #212121;
+	font-size: 20px;
+	grid-area: n;
+}
+
+.nav-bar{
+	padding: 15px 15px;
+	cursor: pointer;
+}
+
+.nav-bar-home{
+	background-color: #015f05;
+	color: #cecece;
+}
+
+.nav-bar-home:hover{
+	background-color: #016c04 !important;
+}
+
+.nav-bar:hover{
+	background-color: #262626;
+}

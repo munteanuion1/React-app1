@@ -2,5 +2,18 @@ body {
   background-color: rgb(49, 49, 49);
   font-family: Arial, Calibri sans-serif;
   color: #adadad;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper-app{
+  display: grid;
+  
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 8fr;
+  
+  grid-template-areas:
+  "h h"
+  "n c";
   
 }

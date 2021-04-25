@@ -1,7 +1,11 @@
 .Content {
 	background-color: rgb(49, 49, 49);
-	min-height: 500px;
-	max-width: 1200px;
-	width: 85%;
-	margin: 0 auto;
+	grid-area: c;
+	padding: 5px 25px;
+}
+
+.wrapper-content{
+	display: grid;
+	
+	grid-template-rows: 90px;
 }

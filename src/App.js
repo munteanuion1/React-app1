@@ -1,14 +1,15 @@
 import './App.css';
-import Header from './Header/Header';
+import Navbar from './Navbar/Navbar';
 import Content from "./Content/Content";
-import Footer from './Footer/Footer';
+import Header from './Header/Header';
 
 const App = () =>{
  return (
-   <div className="App">
+   <div className="wrapper-app">
     <Header />
+    <Navbar />
     <Content />
-    <Footer />
+    
    </div>
  );
 }

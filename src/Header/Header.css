@@ -1,23 +1,36 @@
 .Header {
 	background-color: #212121;
-	font-size: 20px;
-	display: flex;
+	grid-area: h;
 }
 
-.nav-bar{
-	padding: 15px 15px;
+.nav-header{
+	display: inline-flex;
+	padding: 10px 25px;
 	cursor: pointer;
+	font-size: 24px;
 }
 
-.nav-bar-home{
-	background-color: #015f05;
-	color: #cecece;
-}
-
-.nav-bar-home:hover{
-	background-color: #016c04 !important;
-}
-
-.nav-bar:hover{
+.nav-header:hover{
 	background-color: #262626;
+}
+
+.googlePlay-logo{
+	width: 30px;
+	height: 35px;
+	margin-right: 5px;
+}
+
+.googlePlay{
+	padding: 5px 0;
+}
+
+.cont-nav{
+	float: right;
+	padding: 15px 25px;
+}
+
+.profile-icon{
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
 }
