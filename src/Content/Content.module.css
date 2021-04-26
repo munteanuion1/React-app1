@@ -1,10 +1,10 @@
-.Content {
+.content {
 	background-color: rgb(49, 49, 49);
 	grid-area: c;
 	padding: 5px 25px;
 }
 
-.wrapper-content{
+.wrapper{
 	display: grid;
 	
 	grid-template-rows: 90px;

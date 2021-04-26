@@ -1,23 +1,24 @@
-.Navbar {
+.navbar {
 	background-color: #212121;
 	font-size: 20px;
 	grid-area: n;
+	max-width: 250px;
 }
 
-.nav-bar{
-	padding: 15px 15px;
+.navBtn{
+	padding: 15px 40px;
 	cursor: pointer;
 }
 
-.nav-bar-home{
+.navBtn1{
 	background-color: #015f05;
-	color: #cecece;
+	 color: #cecece;
 }
 
-.nav-bar-home:hover{
+.navBtn1:hover{
 	background-color: #016c04 !important;
 }
 
-.nav-bar:hover{
+.navBtn:hover{
 	background-color: #262626;
 }

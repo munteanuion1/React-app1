@@ -5,7 +5,7 @@ import Header from './Header/Header';
 
 const App = () =>{
  return (
-   <div className="wrapper-app">
+   <div className="wrapper">
     <Header />
     <Navbar />
     <Content />
@@ -13,11 +13,5 @@ const App = () =>{
    </div>
  );
 }
-
-
-
-
-
-
 
 export default App;
