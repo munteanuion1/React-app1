@@ -1,0 +1,19 @@
+.block{
+	display: grid;
+	
+	grid-template-areas:
+	"a"
+	"b";
+}
+
+.title{
+	grid-area: a;
+	padding-left: 5%;
+	background-color: brown;
+}
+
+.appBlock{
+	grid-area: b;
+	padding-left: 5%;
+	background-color: #262626;
+}

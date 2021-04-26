@@ -2,13 +2,15 @@ body {
   background-color: rgb(49, 49, 49);
   font-family: Arial, Calibri sans-serif;
   color: #adadad;
-  margin: 0 auto;
 }
-
+.content {
+  background-color: rgb(49, 49, 49);
+  grid-area: c;
+}
 .wrapper{
   display: grid;
   
-  grid-template-columns: 2fr 7fr;
+  grid-template-columns: 2fr 8fr;
   
   grid-template-areas:
   "h h"

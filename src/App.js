@@ -1,15 +1,18 @@
-import './App.css';
+import s from './App.module.css';
 import Navbar from './Navbar/Navbar';
-import Content from "./Content/Content";
+import Home from "./Home/Home";
 import Header from './Header/Header';
+import Applications from "./Applications/Applications";
 
 const App = () =>{
  return (
-   <div className="wrapper">
+   <div className={s.wrapper}>
     <Header />
     <Navbar />
-    <Content />
-    
+    <div className={s.content}>
+    <Home />
+    {/*<Applications />*/}
+    </div>
    </div>
  );
 }
