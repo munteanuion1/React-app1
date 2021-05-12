@@ -1,11 +1,11 @@
 import s from './Home.module.css';
 import Block from '../Block/Block'
 
-const Home = () => {
+const Home = (props) => {
 	return (
 		<div>
-			<Block name='Applications' item='Application'/>
-			<Block name='Games' item='Game'/>
+			<Block name='Applications' state={props.state.applications}/>
+			<Block name='Games' state={props.state.games}/>
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 .header {
-	background-color: #212121;
+	background-color: #1e1e1e;
 	grid-area: h;
 }
 
@@ -28,4 +28,13 @@
 
 .fR{
 	float: right;
+}
+
+.navLink{
+	text-decoration-line: none;
+	color: #cecece;
+}
+
+.btn:hover{
+	font-size: 24.3px;
 }

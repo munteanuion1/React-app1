@@ -1,0 +1,31 @@
+.sidebar {
+	background-color: #242424;
+	font-size: 20px;
+	grid-area: n;
+	margin-left: 10px;
+}
+
+.sideBtn {
+	padding: 15px 40px;
+	cursor: pointer;
+	color: #cecece;
+}
+
+.sideLink {
+	text-decoration-line: none;
+}
+
+.sideBtn1 {
+	background-color: #015f05;
+	color: #cecece;
+}
+
+.sideBtn1:hover {
+	background-color: #016c04 !important;
+}
+
+.sideBtn:hover {
+	background-color: #262626;
+	font-size: 20.7px;
+	transition-duration: 0.1s;
+}
