@@ -4,19 +4,20 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import {BrowserRouter} from "react-router-dom"
-import {commentAdd,changeComment,subscribe} from './Redux/State'
-import state from './Redux/State'
+import store from './Redux/Store'
 
 export const renderReactApp = (state) => {
 	ReactDOM.render(
 		<BrowserRouter>
-			<App state={state} commentAdd={commentAdd} changeComment={changeComment}/>
+			<App state={store.getState()}
+			     commentAdd={store.commentAdd.bind(store)}
+			     changeComment={store.changeComment.bind(store)}/> //bind() functia leaga callback functia care o trimitem cu un obiect din care sa caute ce avem nevoie cand folosim this.
 		</BrowserRouter>,
 		document.getElementById('root')
 	)
 }
-subscribe(renderReactApp)
-renderReactApp(state)
+store.subscribe(renderReactApp)
+renderReactApp(store.getState())
 
 
 // If you want to start measuring performance in your app, pass a function
