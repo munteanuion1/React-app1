@@ -1,3 +1,6 @@
+const COMMENT_ADD = "COMMENT-ADD"
+const CHANGE_NEW_COMMENT = "CHANGE-NEW-COMMENT"
+
 let store = {
 	_state: {
 		applications: [
@@ -33,9 +36,9 @@ let store = {
 		this._callSubscriber = observer
 	},
 	dispatch(action){
-		if (action.type === "CHANGE-NEW-COMMENT"){
+		if (action.type === CHANGE_NEW_COMMENT){
 			this.setNewComment(action.text)
-		} else if (action.type === "COMMENT-ADD"){
+		} else if (action.type === COMMENT_ADD){
 			const newComment = {
 				id:1003,
 				text: this._state.newComment
@@ -46,5 +49,9 @@ let store = {
 		}
 	}
 }
+
+export const addCommentActionCreator = () => ({ type: COMMENT_ADD })
+export const updateNewCommentActionCreator = (text) => ({type: CHANGE_NEW_COMMENT, text: text})    // crtl + alt + v
+
 export default store
 
