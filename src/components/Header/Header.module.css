@@ -1,0 +1,40 @@
+.header {
+	background-color: #1e1e1e;
+	grid-area: h;
+}
+
+.btn{
+	display: inline-flex;
+	margin: 12px 40px;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.googlePlayLogo{
+	width: 30px;
+	height: 35px;
+	margin-right: 5px;
+}
+
+.profileIcon{
+	width: 35px;
+	height: 35px;
+	margin-right: 5px;
+}
+
+.txtHeader{
+	margin: auto 0;
+}
+
+.fR{
+	float: right;
+}
+
+.navLink{
+	text-decoration-line: none;
+	color: #cecece;
+}
+
+.btn:hover{
+	font-size: 24.3px;
+}

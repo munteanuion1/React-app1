@@ -1,0 +1,17 @@
+.img {
+	max-width: 150px;
+}
+
+.Item {
+	display: inline-flex;
+	margin: 1%;
+	cursor: pointer;
+}
+
+.title {
+	color: #adadad;
+}
+
+.Link {
+	text-decoration-line: none;
+}
