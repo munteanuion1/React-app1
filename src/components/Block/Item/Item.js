@@ -7,7 +7,7 @@ const Item = (props) => {
 		<NavLink className={s.Link} to='/application'>
 			<div className={s.Item}>
 				<div>
-					<img className={s.img} src={Images.img1} alt="not found image"/>
+					<img className={s.img} src={Images[props.image]} alt="not found image"/>
 					<p className={s.title}>{props.name}</p>
 				</div>
 			</div>

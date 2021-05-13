@@ -4,19 +4,19 @@ const CHANGE_NEW_COMMENT = "CHANGE-NEW-COMMENT"
 let store = {
 	_state: {
 		applications: [
-			{id: 1, name: "Netflix", price: 0, category: "app", src:"../Img/google-play-logo.png"},
-			{id: 2, name: "Instagram", price: 0, category: "app"},
-			{id: 3, name: "Mail", price: 0, category: "app"},
-			{id: 4, name: "Photoshop", price: 0, category: "app"},
-			{id: 5, name: "Youtube", price: 0, category: "app"},
-			{id: 6, name: "Discord", price: 0, category: "app"}
+			{id: 1, name: "Netflix", price: 0, category: "app", image:"netflix.webp"},
+			{id: 2, name: "Instagram", price: 0, category: "app", image:"instagram.webp"},
+			{id: 3, name: "Gmail", price: 0, category: "app", image:"gmail.webp"},
+			{id: 4, name: "Photoshop", price: 0, category: "app", image:"photoshop.webp"},
+			{id: 5, name: "Youtube", price: 0, category: "app", image:"youtube.webp"},
+			{id: 6, name: "Discord", price: 0, category: "app", image:"discord.webp"}
 		],
 		games: [
-			{id: 107, name: "Clash of Clans", price: 0, category: "game"},
-			{id: 108, name: "PUBG", price: 0, category: "game"},
-			{id: 109, name: "Wild Rift", price: 0, category: "game"},
-			{id: 110, name: "Brawl", price: 0, category: "game"},
-			{id: 111, name: "Among US", price: 0, category: "game"}
+			{id: 107, name: "Clash of Clans", price: 0, category: "game", image:"clashofclans.webp"},
+			{id: 108, name: "PUBG", price: 0, category: "game", image:"PUBG.webp"},
+			{id: 109, name: "Wild Rift", price: 0, category: "game", image:"WildRift.webp"},
+			{id: 110, name: "Brawl", price: 0, category: "game", image:"Brawl.webp"},
+			{id: 111, name: "Among US", price: 0, category: "game", image:"AmongUS.webp"}
 		],
 		comments: [
 			{id: 1001, text: "Super"},
