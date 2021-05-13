@@ -3,16 +3,22 @@ import React from 'react'
 
 const Application = (props) => {
 	const newComment = React.createRef()
+	
 	const addComment = () => {
-		const text = newComment.current.value
-		props.commentAdd(text)
+		const action = {
+			type:"COMMENT-ADD",
+		}
+		props.dispatch(action)
 	}
 	
 	const allComment = props.state.map((el) => <p>{el.text}</p>)
 	
 	const changeComment = () => {
-		let text = newComment.current.value
-		props.changeComment(text)
+		const action = {
+			type:"CHANGE-NEW-COMMENT",
+			text: newComment.current.value
+		}
+		props.dispatch(action)
 	}
 	
 	return (

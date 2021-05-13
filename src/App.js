@@ -14,7 +14,7 @@ const App = (props) => {
 				<div className={s.content}>
 					<Route exact path='/' component={() => <Home state={props.state}/>}/>
 					<Route path='/applications' render={() => <Applications state={props.state.applications}/>}/>
-					<Route path='/application' component={() => <Application state={props.state.comments} commentAdd={props.commentAdd} changeComment={props.changeComment}/>}/>
+					<Route path='/application' component={() => <Application state={props.state.comments} dispatch={props.dispatch}/>}/>
 				</div>
 			</div>
 	);

@@ -21,27 +21,29 @@ let store = {
 		],
 		newComment:""
 	},
+	_callSubscriber() {
+	},
 	setNewComment(text){
 		this._state.newComment = text
 	},
 	getState() {
 		return this._state
 	},
-	_callSubscriber() {
-	},
-	commentAdd(text) {
-		const newComment = {
-			id:1003,
-			text:text
-		}
-		this._state.comments.push(newComment)
-		this._callSubscriber(this.state)
-	},
-	changeComment(text) {
-		this.setNewComment(text)
-	},
 	subscribe(observer) { // pattern observer(se aseamana cu publisher-subscriber)
 		this._callSubscriber = observer
+	},
+	dispatch(action){
+		if (action.type === "CHANGE-NEW-COMMENT"){
+			this.setNewComment(action.text)
+		} else if (action.type === "COMMENT-ADD"){
+			const newComment = {
+				id:1003,
+				text: this._state.newComment
+			}
+			this._state.comments.push(newComment)
+			this._state.newComment = ''
+			this._callSubscriber(this.state)
+		}
 	}
 }
 export default store
