@@ -1,10 +1,10 @@
 import s from './App.module.css';
-import SideBar from './SideBar/SideBar';
-import Home from "./Home/Home";
-import Header from './Header/Header';
-import Applications from "./Applications/Applications";
+import SideBar from './components/SideBar/SideBar';
+import Home from "./components/Home/Home";
+import Header from './components/Header/Header';
+import Applications from "./components/Applications/Applications";
 import {Route} from "react-router-dom";
-import Application from "./Applications/Application/Application";
+import Application from "./components/Applications/Application/Application";
 
 const App = (props) => {
 	return (

@@ -4,7 +4,7 @@ const CHANGE_NEW_COMMENT = "CHANGE-NEW-COMMENT"
 let store = {
 	_state: {
 		applications: [
-			{id: 1, name: "Netflix", price: 0, category: "app", src: "google-play-logo.png"},
+			{id: 1, name: "Netflix", price: 0, category: "app", src:"../Img/google-play-logo.png"},
 			{id: 2, name: "Instagram", price: 0, category: "app"},
 			{id: 3, name: "Mail", price: 0, category: "app"},
 			{id: 4, name: "Photoshop", price: 0, category: "app"},
