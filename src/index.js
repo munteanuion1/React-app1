@@ -10,7 +10,7 @@ export const renderReactApp = (state) => {
 	ReactDOM.render(
 		<BrowserRouter>
 			<App state={store.getState()}
-			     dispatch={store.dispatch.bind(store)}/> {/*bind() functia leaga callback functia care o trimitem cu un obiect din care sa caute ce avem nevoie cand folosim this. */}
+			     dispatch={store.dispatch.bind(store)}/>      {/*bind() functia leaga callback functia care o trimitem cu un obiect din care sa caute ce avem nevoie cand folosim this. */}
 		</BrowserRouter>,
 		document.getElementById('root')
 	)

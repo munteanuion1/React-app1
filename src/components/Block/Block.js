@@ -3,7 +3,7 @@ import s from './Block.module.css';
 import Item from './Item/Item';
 
 const Block = (props) => {
-	const itemElements = props.state.map(el => <Item name={el.name} image={el.image}/>);
+	const itemElements = props.state.map(el => <Item name={el.name} image={el.image} itemId={el.id}/>);
 	
 	return (
 		<div className={s.block}>

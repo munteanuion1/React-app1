@@ -4,7 +4,7 @@ import Images from "../../../Img/Images/Images"
 
 const Item = (props) => {
 	return (
-		<NavLink className={s.Link} to='/application'>
+		<NavLink className={s.Link} to={'/application/' + props.itemId}>
 			<div className={s.Item}>
 				<div>
 					<img className={s.img} src={Images[props.image]} alt="not found image"/>
