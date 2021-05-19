@@ -3,22 +3,22 @@ import SideBar from './components/SideBar/SideBar';
 import Home from "./components/Home/Home";
 import Header from './components/Header/Header';
 import Applications from "./components/Applications/Applications";
-import {Route} from "react-router-dom";
 import Application from "./components/Applications/Application/Application";
 import React from "react";
+import {Route} from "react-router-dom";
 
 const App = (props) => {
 	const appElements = props.state.applications.map(el => <Route
 		path={'/application/' + el.id}
 		component={() => <Application
-			state={props.state.comments}
+			state={props.state.Comments}
 			app={el}
 			dispatch={props.dispatch}/>}/>
 	);
 	const gameElements = props.state.games.map(el => <Route
 		path={'/application/' + el.id}
 		component={() => <Application
-			state={props.state.comments}
+			state={props.state.Comments}
 			app={el}
 			dispatch={props.dispatch}/>}/>
 	);

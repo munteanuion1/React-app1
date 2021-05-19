@@ -1,6 +1,6 @@
 import s from './Application.module.css'
 import React from 'react'
-import {addCommentActionCreator, updateNewCommentTextActionCreator} from "../../../Redux/Store";
+import {addCommentActionCreator, updateNewCommentTextActionCreator} from "../../../Redux/comments-reducer";
 import Images from "../../../Img/Images/Images"
 
 const Application = (props) => {
@@ -10,7 +10,7 @@ const Application = (props) => {
 		props.dispatch(addCommentActionCreator())
 	}
 	
-	const allComment = props.state.map((el) => <p>{el.text}</p>)
+	const allComment = props.state.comments.map((el) => <p>{el.text}</p>)
 	
 	const changeComment = () => {
 		const text = newComment.current.value
@@ -25,7 +25,7 @@ const Application = (props) => {
 				<p className={s.description}>{props.app.description}</p>
 			</div>
 			<br/>
-			<textarea onChange={changeComment} ref={newComment} value={props.state.newCommentText}/>
+			<textarea placeholder="Enter the comment" onChange={changeComment} ref={newComment} value={props.state.newCommentText}/>
 			<br/>
 			<button onClick={addComment}>Comment</button>
 			<h3>Comments:</h3>
