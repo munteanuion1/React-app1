@@ -1,6 +1,5 @@
 import {commentsReducer} from "./comments-reducer";
 
-const COMMENT_ADD = "COMMENT-ADD"
 const CHANGE_NEW_COMMENT_TEXT = "CHANGE-NEW-COMMENT-TEXT"
 
 let store = {
@@ -114,7 +113,7 @@ let store = {
 			{id: 110, name: "Brawl", price: 0, category: "game", image: "Brawl.webp", description: ""},
 			{id: 111, name: "Among US", price: 0, category: "game", image: "AmongUS.webp", description: ""}
 		],
-		Comments:{
+		Comments: {
 			comments: [
 				{id: 1001, text: "Super"},
 				{id: 1002, text: "Klass"}
@@ -131,11 +130,12 @@ let store = {
 		this._callSubscriber = observer
 	},
 	dispatch(action) {
-			this._state.Comments = commentsReducer(this._state.Comments, action)
-			
-			this._callSubscriber(this._state)
-		}
+		this._state.Comments = commentsReducer(this._state.Comments, action)
+		
+		//if(action.type !== CHANGE_NEW_COMMENT_TEXT)
+		this._callSubscriber(this.getState())
 	}
+}
 
 
  // crtl + alt + v

@@ -10,6 +10,7 @@ export const commentsReducer = (state, action) => {
 				text: state.newCommentText
 			}
 			state.comments.push(newCommentText)
+			state.newCommentText = ''
 			return state
 		}
 		case CHANGE_NEW_COMMENT_TEXT: {

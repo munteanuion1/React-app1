@@ -7,7 +7,8 @@ const Application = (props) => {
 	const newComment = React.createRef()
 	
 	const addComment = () => {
-		props.dispatch(addCommentActionCreator())
+		if (props.state.newCommentText !== '')
+			props.dispatch(addCommentActionCreator())
 	}
 	
 	const allComment = props.state.comments.map((el) => <p>{el.text}</p>)
