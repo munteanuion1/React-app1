@@ -1,18 +1,17 @@
 import s from './Application.module.css'
 import React from 'react'
-import {addCommentActionCreator, updateNewCommentTextActionCreator} from "../../../Redux/comments-reducer";
 import Images from "../../../Img/Images/Images"
 
 const Application = (props) => {
 	const newComment = React.createRef()
 	
-	const addComment = () => {
+	const onAddComment = () => {
 		const text = newComment.current.value
 		if (text !== '')
-			props.dispatch(addCommentActionCreator(text))// crtl + alt + shift + j
+			props.addComment(text)// crtl + alt + shift + j
 	}
 	
-	const allComment = props.state.map((el) => <p>{el.text}</p>)
+	const allComment = props.comments.map((el) => <p>{el.text}</p>)
 	
 	return (
 		<div className={s.container}>
@@ -23,7 +22,7 @@ const Application = (props) => {
 			<br/>
 			<textarea placeholder="Enter the comment" ref={newComment}/>
 			<br/>
-			<button onClick={addComment}>Comment</button>
+			<button onClick={onAddComment}>Comment</button>
 			<h3>Comments:</h3>
 			{allComment}
 		</div>

@@ -6,17 +6,16 @@ import reportWebVitals from './reportWebVitals'
 import {BrowserRouter} from "react-router-dom"
 import store from './Redux/redux-store'
 
-export const renderReactApp = (state = store.getState()) => {
+export const renderReactApp = () => {
 	ReactDOM.render(
 		<BrowserRouter>
-			<App state={state}
-			     dispatch={store.dispatch.bind(store)}/>      {/*bind() functia leaga callback functia care o trimitem cu un obiect din care sa caute ce avem nevoie cand folosim this. */}
+			<App store={store}/>      {/*bind() functia leaga callback functia care o trimitem cu un obiect din care sa caute ce avem nevoie cand folosim this. */}
 		</BrowserRouter>,
 		document.getElementById('root')
 	)
 }
 store.subscribe(renderReactApp)
-renderReactApp(store.getState())
+renderReactApp(store)
 
 
 // If you want to start measuring performance in your app, pass a function

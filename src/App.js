@@ -3,34 +3,28 @@ import SideBar from './components/SideBar/SideBar';
 import Home from "./components/Home/Home";
 import Header from './components/Header/Header';
 import Applications from "./components/Applications/Applications";
-import Application from "./components/Applications/Application/Application";
 import React from "react";
 import {Route} from "react-router-dom";
+import ApplicationContainer from "./components/Applications/Application/ApplicationContainer";
 
 const App = (props) => {
-	const appElements = props.state.applications.map(el => <Route
-		path={'/application/' + el.id}
-		component={() => <Application
-			state={props.state.Comments}
-			app={el}
-			dispatch={props.dispatch}/>}/>
-	);
-	const gameElements = props.state.games.map(el => <Route
-		path={'/application/' + el.id}
-		component={() => <Application
-			state={props.state.Comments}
-			app={el}
-			dispatch={props.dispatch}/>}/>
-	);
-	
+	const state = props.store.getState()
+	let fun = (el) => {
+		let app = el
+		return <Route
+			path={'/application/' + el.id}
+			component={() => <ApplicationContainer app={app} store={props.store}/>}/>
+	}
+	const appElements = state.applications.map(el => fun(el));
+	const gameElements = state.games.map(el => fun(el));
 	return (
 		<div className={s.wrapper}>
 			<Header/>
 			<SideBar/>
 			<div className={s.content}>
-				<Route exact path='/' component={() => <Home state={props.state}/>}/>
-				<Route path='/applications' render={() => <Applications state={props.state.applications}/>}/>
-				<Route path='/games' render={() => <Applications state={props.state.games}/>}/>
+				<Route exact path='/' component={() => <Home state={state}/>}/>
+				<Route path='/applications' render={() => <Applications state={state.applications}/>}/>
+				<Route path='/games' render={() => <Applications state={state.games}/>}/>
 				{appElements}
 				{gameElements}
 			</div>

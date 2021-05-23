@@ -6,7 +6,7 @@ import {commentsReducer} from "./comments-reducer";
 const reducers = combineReducers({
 	applications: applicationsReducer,
 	games: gamesReducer,
-	Comments: commentsReducer
+	comments: commentsReducer
 })
 
 let store = createStore(reducers)
