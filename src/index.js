@@ -4,9 +4,9 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import {BrowserRouter} from "react-router-dom"
-import store from './Redux/Store'
+import store from './Redux/redux-store'
 
-export const renderReactApp = (state) => {
+export const renderReactApp = (state = store.getState()) => {
 	ReactDOM.render(
 		<BrowserRouter>
 			<App state={state}

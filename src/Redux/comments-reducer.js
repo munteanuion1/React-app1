@@ -1,20 +1,19 @@
 const COMMENT_ADD = "COMMENT-ADD"
-const CHANGE_NEW_COMMENT_TEXT = "CHANGE-NEW-COMMENT-TEXT"
 
-export const commentsReducer = (state, action) => {
+const initialState = [
+	{id: 1001, text: "Super"},
+	{id: 1002, text: "Klass"}
+]
+
+export const commentsReducer = (state = initialState, action) => {
 	
 	switch (action.type) {
 		case COMMENT_ADD: {
 			const newCommentText = {
 				id: 1003,
-				text: state.newCommentText
+				text: action.text
 			}
-			state.comments.push(newCommentText)
-			state.newCommentText = ''
-			return state
-		}
-		case CHANGE_NEW_COMMENT_TEXT: {
-			state.newCommentText = action.text
+			state.push(newCommentText)
 			return state
 		}
 		default:
@@ -22,5 +21,4 @@ export const commentsReducer = (state, action) => {
 	}
 }
 
-export const addCommentActionCreator = () => ({type: COMMENT_ADD})
-export const updateNewCommentTextActionCreator = (text) => ({type: CHANGE_NEW_COMMENT_TEXT, text: text})
+export const addCommentActionCreator = (text) => ({type: COMMENT_ADD, text: text})

@@ -7,17 +7,12 @@ const Application = (props) => {
 	const newComment = React.createRef()
 	
 	const addComment = () => {
-		if (props.state.newCommentText !== '')
-			props.dispatch(addCommentActionCreator())
-	}
-	
-	const allComment = props.state.comments.map((el) => <p>{el.text}</p>)
-	
-	const changeComment = () => {
 		const text = newComment.current.value
-		const action = updateNewCommentTextActionCreator(text)
-		props.dispatch(action) // crtl + alt + shift + j
+		if (text !== '')
+			props.dispatch(addCommentActionCreator(text))// crtl + alt + shift + j
 	}
+	
+	const allComment = props.state.map((el) => <p>{el.text}</p>)
 	
 	return (
 		<div className={s.container}>
@@ -26,7 +21,7 @@ const Application = (props) => {
 				<p className={s.description}>{props.app.description}</p>
 			</div>
 			<br/>
-			<textarea placeholder="Enter the comment" onChange={changeComment} ref={newComment} value={props.state.newCommentText}/>
+			<textarea placeholder="Enter the comment" ref={newComment}/>
 			<br/>
 			<button onClick={addComment}>Comment</button>
 			<h3>Comments:</h3>
